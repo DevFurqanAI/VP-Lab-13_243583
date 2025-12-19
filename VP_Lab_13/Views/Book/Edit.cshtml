@@ -1,0 +1,21 @@
+﻿@model VP_Lab_13.Models.Book
+@{
+    ViewData["Title"] = "Edit Book";
+}
+
+<h2>Edit Book</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="BookId" />
+    <div class="form-group">
+        <label asp-for="BookTitle"></label>
+        <input asp-for="BookTitle" class="form-control" />
+        <span asp-validation-for="BookTitle" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Update</button>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Back to List</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

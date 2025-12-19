@@ -1,0 +1,175 @@
+﻿@{
+    ViewData["Title"] = "Student Registration";
+}
+
+<style>
+    .registration-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    .registration-card {
+        background-color: #e8e8e8;
+        border-radius: 8px;
+        padding: 40px;
+        width: 100%;
+        max-width: 600px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .form-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-label {
+        display: block;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        background-color: white;
+        box-sizing: border-box;
+    }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+
+        .form-control::placeholder {
+            color: #999;
+        }
+
+    textarea.form-control {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .input-with-icon {
+        position: relative;
+    }
+
+    .input-icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #666;
+        pointer-events: none;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+        .submit-btn:hover {
+            background-color: #357abd;
+        }
+</style>
+
+<div class="registration-container">
+    <div class="registration-card">
+        <h1 class="form-title">Student Registration Form</h1>
+
+        <form>
+            <div class="form-group">
+                <label class="form-label" for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your full name" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="fatherName">Father Name</label>
+                <input type="text" id="fatherName" name="fatherName" class="form-control" placeholder="Enter father's name" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="03XX-XXXXXXX" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="cnic">CNIC</label>
+                <input type="text" id="cnic" name="cnic" class="form-control" placeholder="12345-1234567-1" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="dateOfBirth">Date of Birth</label>
+                <div class="input-with-icon">
+                    <input type="text" id="dateOfBirth" name="dateOfBirth" class="form-control" placeholder="dd/mm/yyyy" />
+                    <span class="input-icon">📅</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="gender">Gender</label>
+                <select id="gender" name="gender" class="form-control">
+                    <option value="">-- Select Gender --</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="degreeProgram">Degree Program</label>
+                <input type="text" id="degreeProgram" name="degreeProgram" class="form-control" placeholder="BSCS / BSSE / BBA etc." />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="semester">Semester</label>
+                <select id="semester" name="semester" class="form-control">
+                    <option value="">-- Select Semester --</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                    <option value="7">Semester 7</option>
+                    <option value="8">Semester 8</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="address">Address</label>
+                <textarea id="address" name="address" class="form-control" placeholder="Enter your address"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Registration</button>
+        </form>
+    </div>
+</div>

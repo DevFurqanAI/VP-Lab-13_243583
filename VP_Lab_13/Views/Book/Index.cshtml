@@ -1,0 +1,29 @@
+﻿@model List<VP_Lab_13.Models.Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books</h1>
+
+<p>
+    <a asp-controller="Book" asp-action="Create" class="btn btn-primary">Create New</a>
+    <a asp-controller="Book" asp-action="ViewAll" class="btn btn-secondary">View All</a>
+</p>
+
+<table class="table table-bordered">
+    <thead><tr><th>BookId</th><th>Title</th><th>Actions</th></tr></thead>
+    <tbody>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td>@b.BookId</td>
+                <td>@b.BookTitle</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@b.BookId" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@b.BookId" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

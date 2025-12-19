@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "VP_Lab_13_Do_It_Yourself/1.0.0": {
+        "runtime": {
+          "VP_Lab_13_Do_It_Yourself.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VP_Lab_13_Do_It_Yourself/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
